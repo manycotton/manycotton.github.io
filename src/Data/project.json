@@ -1,0 +1,48 @@
+[
+    {
+        "project_image": "images/chatGPT.png",
+        "project_title": "Opportunities and challenges of integrating ChatGPT into everyday lives of autistic individuals",
+        "project_description": "We conducted participatory workshops where autistic adults identified strategies to utilize LLM-based conversational AI (CA) in various aspects of their lives and we gathered data from their week-long use of LLM-based CA in daily activities.",
+        "project_tag": ["LLM", "ASD"],
+        "related_pub": ">> Ongoing projects",
+        "pub_link": ""
+    },
+
+    {
+        "project_image": "images/onlinedating.png",
+        "project_title": "Do online dating services meet the diverse needs of autistic users in finding true love?",
+        "project_description": "To understand autistic users' perceptions and expectations in online dating, we conducted workshops with simulated dating activities.",
+        "project_tag": ["Inclusive algorithm", "ASD"],
+        "related_pub": ">> CHI 2023 Publication",
+        "pub_link": "papers/Love.pdf"
+    },
+
+    {
+        "project_image": "images/youtube.png",
+        "project_title": "Exploring the inclusiveness of algorithmic experiences for YouTube creators with disabilities",
+        "tag":"#disabilities #inclusive AX",
+        "project_description": "We investigated how content creators with disabilities interact with YouTube's algorithms to reach global audiences, amidst concerns of algorithmic biases.",
+        "project_tag": ["Inclusive algorithm", "Disability creators"],
+        "related_pub": ">> CHI 2022 Publication",
+        "pub_link": "papers/not wrong.pdf"
+    },
+
+    {
+        "project_image": "images/ca.png",
+        "project_title": "How should conversational agents adjust their speech rate for people with vision impairments?",
+        "project_description": "We tried to understand how people with vision impairments accept conversational agents at a fast speech rate by conducting a 20-day in-home study.",
+        "project_tag": ["Conversational Agents", "Accessibility"],
+        "related_pub": ">> CHI 2020 Publication (Honorable Mention)",
+        "pub_link": "papers/Nobody.pdf"
+    },
+
+    {
+        "project_image": "images/allsub.png",
+        "project_title": "Allsub: a crowdsourcing platform generating accessible subtitles for people with hearing impairments",
+        "tag":"#hearing impairments #accessible film",
+        "project_description": "We propose ALLSUB, a crowdsourcing platform that enables web users to produce descriptive captions of short video clips. ",
+        "project_tag": ["Crowdsourcing", "Accessibility"],
+        "related_pub": ">> HCI Korea 2017 Poster",
+        "pub_link": "papers/allsub.pdf"
+    }
+]
