@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "inter-black";
+    src: url("../Fonts/Inter-Black.ttf");
+}
+
+@font-face {
+    font-family: "inter-bold";
+    src: url("../Fonts/Inter-Bold.ttf");
+}
+
+@font-face {
+    font-family: "inter-extrabold";
+    src: url("../Fonts/Inter-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "inter-extralight";
+    src: url("../Fonts/Inter-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: "inter-light";
+    src: url("../Fonts/Inter-Light.ttf");
+}
+
+@font-face {
+    font-family: "inter-medium";
+    src: url("../Fonts/Inter-Medium.ttf");
+}
+
+@font-face {
+    font-family: "inter-regular";
+    src: url("../Fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: "inter-semibold";
+    src: url("../Fonts/Inter-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "inter-thin";
+    src: url("../Fonts/Inter-Thin.ttf");
+}
+
+@font-face {
+    font-family: "lato-regular";
+    src: url("../Fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+    font-family: "lato-italic";
+    src: url("../Fonts/Lato-Italic.ttf");
+}
+
+@font-face {
+    font-family: "lato-light";
+    src: url("../Fonts/Lato-Light.ttf");
+}
+
+@font-face {
+    font-family: "lato-lightitalic";
+    src: url("../Fonts/Lato-LightItalic.ttf");
+}
+
+@font-face {
+    font-family: "lato-bold";
+    src: url("../Fonts/Lato-Bold.ttf");
+}
+
+.mainpage{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    width: 70%
+}
+
+.footer {
+    display: flex;
+    font-family: inter-regular;
+    font-size: 13px;
+    color: #667085;
+    margin-bottom: 60px;
+}
+
+html {
+    scroll-behavior: smooth;
+  }

@@ -1,0 +1,155 @@
+.publications{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 300px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+@media screen and (min-width: 720px) {
+    .publications {
+        width: 650px; /* size for 1080px screen */
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .publications {
+        width: 1000px; /* size for 1080px screen */
+    }
+}
+
+.title{
+    display: flex;
+    font-family: 'inter-bold';
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.categories{
+    display: flex;
+    font-family: 'inter-light';
+    font-size: 15.5px;
+    margin-bottom: 40px;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.category{
+    display: flex;
+}
+
+.pub_set{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pub{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-bottom: 35px;
+}
+
+.pubtitle{
+    display: flex;
+    font-family: 'inter-bold';
+    font-size: 16px;
+    margin-bottom: 5px;
+    line-height: 23px;
+}
+
+.authors{
+    display: inline;
+    font-family: 'inter-regular';
+    color: #2A2A2A;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 4px;
+}
+
+.venue{
+    display: flex;
+    font-size: 15px;
+    color: #2A2A2A;
+    margin-bottom: 4px;
+}
+
+.conference{
+    display: flex;
+    font-family: 'inter-regular';
+    font-style: italic;
+    color: #2A2A2A;
+    margin-right: 6px;
+}
+
+.year{
+    display: flex;
+    font-family: 'inter-semibold';
+    color: #2A2A2A;
+    font-size: 15px;
+    margin-right: 6px;
+}
+
+.others{
+    display: flex;
+    color: #1A1A1A;
+    
+}
+
+.awards{
+    display: flex;
+    font-family: 'inter-semibold';
+    color: #0057FF;    
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.doi{
+    display: flex;
+    font-family: 'inter-regular';
+    font-size: 15px;
+    margin-right: 6px;
+}
+
+.pdf{
+    display: flex;
+    font-family: 'inter-regular';
+    font-size: 15px;
+    margin-right: 6px;
+}
+
+.video{
+    display: flex;
+    font-family: 'inter-regular';
+    font-size: 15px;
+    margin-right: 6px;
+}
+
+.publications a {
+    color: #667085;
+}
+
+.publications a:hover {
+    color: #0057FF;
+}
+
+.pub_year{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.year_info{
+    display: flex;
+    font-family: inter-semibold;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.paper_type{
+    display: flex;
+    font-family: inter-light;
+    font-size: 14px;
+    /* font-style: italic; */
+}

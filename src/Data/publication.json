@@ -1,0 +1,163 @@
+[
+    {
+        "pubtitle": "Unlock Life with a Chat(GPT): Integrating Conversational AI with Large Language Models into Everyday Lives of Autistic Individuals",
+        "authors": "Dasom Choi, Sunok Lee, Sung-In Kim, Kyungah Lee, Hee Jeong Yoo, Sangsu Lee and Hwajung Hong",
+        "conference": "ACM Conference on Human Factors in Computing Systems",
+        "year": "(CHI 2024)",
+        "awards": "",
+        "doi": "",
+        "doi_url": "",
+        "pdf": "",
+        "pdf_url": "",
+        "video": "",
+        "video_url": "",
+        "year_info": "2024.5",
+        "paper_type": ""
+        
+    },
+
+    {
+        "pubtitle": "Reinforcing and Reclaiming The Home: Co-speculating Future Technologies to Support Remote and Hybrid Work",
+        "authors": "Janghee Cho, Dasom Choi, Junnan Yu, Stephen Voida",
+        "conference": "ACM Conference on Human Factors in Computing Systems",
+        "year": "(CHI 2024)",
+        "awards": "",
+        "doi": "",
+        "doi_url": "",
+        "pdf": "",
+        "pdf_url": "",
+        "video": "",
+        "video_url": "",
+        "year_info": "2024.5",
+        "paper_type": ""
+    },
+
+    {
+        "pubtitle": "Together we turn uncertainty into Action: Understanding the Role of Artificial Intelligence in Supporting the Financial Concerns of Older Adults",
+        "authors": "Yubin Choi, Dasom Choi, and Hwajung Hong",
+        "conference": "Computer Supported Cooperative Work and Social Computing",
+        "year": "(CSCW 2023, Poster)",
+        "awards": "",
+        "doi": "DOI",
+        "doi_url": "https://dl.acm.org/doi/10.1145/3584931.3607018",
+        "pdf": "PDF",
+        "pdf_url": "papers/Together.pdf",
+        "video": "",
+        "video_url": "",
+        "year_info": "2023.10",
+        "paper_type": "Poster"
+    },
+
+    {
+        "pubtitle": "Love on the Spectrum: Toward Inclusive Online Dating Experience of Autistic Individuals",
+        "authors": "Dasom Choi, Sung-In Kim, Sunok Lee, Hyunseung Lim, Hee Jeong Yoo and Hwajung Hong",
+        "conference": "ACM Conference on Human Factors in Computing Systems",
+        "year": "(CHI 2023)",
+        "awards": "",
+        "doi": "DOI",
+        "doi_url": "https://dl.acm.org/doi/10.1145/3544548.3581341",
+        "pdf": "PDF",
+        "pdf_url": "papers/Love.pdf",
+        "video": "Presentation video",
+        "video_url": "https://www.youtube.com/watch?v=qC6oGlNCMBU",
+        "year_info": "2023.04",
+        "paper_type": ""
+    },
+
+    {
+        "pubtitle": "Fostering Youth’s Critical Thinking Competency about AI through Exhibition",
+        "authors": "Sunok Lee, Dasom Choi, Minha Lee, Jonghak Choi, Sangsu Lee",
+        "conference": "ACM Conference on Human Factors in Computing Systems",
+        "year": "(CHI 2023)",
+        "awards": "",
+        "doi": "DOI",
+        "doi_url": "https://dl.acm.org/doi/10.1145/3544548.3581159",
+        "pdf": "PDF",
+        "pdf_url": "papers/Fostering1.pdf",
+        "video": "",
+        "video_url": "",
+        "year_info": "2023.04",
+        "paper_type": ""
+    },
+
+    {
+        "pubtitle": "AI Story Relay: A Collaborative Writing of Design Fiction to Investigate Artificial Intelligence Design Considerations",
+        "authors": "Hyeonjeong Im, Soobin Jeon, Haena Cho, Sungyong Shin, Dasom Choi, and Hwajung Hong",
+        "conference": "ACM International Conference on Supporting Group Work",
+        "year": "(GROUP 2023, Poster)",
+        "awards": "",
+        "doi": "DOI",
+        "doi_url": "https://dl.acm.org/doi/10.1145/3565967.3570973",
+        "pdf": "PDF",
+        "pdf_url": "papers/AI Story Relay.pdf",
+        "video": "",
+        "video_url": "",
+        "year_info": "2023.01",
+        "paper_type": "Poster"
+    },
+
+    {
+        "pubtitle": "\"It's not wrong, but I'm quite disappointed\": Toward an Inclusive Algorithmic Experience for Content Creators with Disabilities",
+        "authors": "Dasom Choi, Uichin Lee, Hwajung Hong",
+        "conference": "ACM Conference on Human Factors in Computing Systems",
+        "year": "(CHI 2022)",
+        "awards": "",
+        "doi": "DOI",
+        "doi_url": "https://dl.acm.org/doi/10.1145/3491102.3517574",
+        "pdf": "PDF",
+        "pdf_url": "papers/not wrong.pdf",
+        "video": "Presentation video",
+        "video_url": "https://www.youtube.com/watch?v=EIxKXq9lAlQ",
+        "year_info": "2022.04",
+        "paper_type": ""
+    },
+
+    {
+        "pubtitle": "Cocomix: Utilizing Comments to Improve Non-Visual Webtoon Accessibility",
+        "authors": "Mina Huh, Yunjung Lee, Dasom Choi, Haesoo Kim, Uran Oh, and Juho Kim",
+        "conference": "ACM Conference on Human Factors in Computing Systems",
+        "year": "(CHI 2022)",
+        "awards": "",
+        "doi": "DOI",
+        "doi_url": "https://dl.acm.org/doi/10.1145/3491102.3502081",
+        "pdf": "PDF",
+        "pdf_url": "papers/Cocomix.pdf",
+        "video": "",
+        "video_url": "",
+        "year_info": "2022.04",
+        "paper_type": ""
+    },
+
+    {
+        "pubtitle": "\"Nobody Speaks that Fast!\" An Empirical Study of Speech Rate in Conversational Agents for People with Vision Impairments",
+        "authors": "Dasom Choi, Daehyun Kwak, Minji Cho, and Sangsu Lee",
+        "conference": "ACM Conference on Human Factors in Computing Systems",
+        "year": "(CHI 2020)",
+        "awards": "Honorable Mention Award (Top 5%)",
+        "doi": "DOI",
+        "doi_url": "https://dl.acm.org/doi/10.1145/3313831.3376569",
+        "pdf": "PDF",
+        "pdf_url": "papers/Nobody.pdf",
+        "video": "",
+        "video_url": "",
+        "year_info": "2020.04",
+        "paper_type": ""
+    },
+
+    {
+        "pubtitle": "Designing a Crowdsourcing Platform for Generating Subtitles of Accessible Films",
+        "authors": "Dasom Choi, Aikerim Orken, Han Lee, and Hwajung Hong",
+        "conference": "HCI Korea 2017",
+        "year": "(Poster)",
+        "awards": "",
+        "doi": "DOI",
+        "doi_url": "",
+        "pdf": "PDF",
+        "pdf_url": "papers/allsub.pdf",
+        "video": "",
+        "video_url": "",
+        "year_info": "2017.02",
+        "paper_type": "Poster"
+    }
+]
+

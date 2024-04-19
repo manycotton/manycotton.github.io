@@ -1,0 +1,59 @@
+.news {
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* Add border around the whole news section */
+  width: 100%; /* Adjust width as necessary */
+
+}
+
+.news_title {
+  display: flex;
+  font-family: 'inter-bold';
+  font-size: 17px;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+
+
+
+.news_description {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: regular;
+  font-size: 14px;
+  line-height: 30px;
+  /* Removed the color comment, uncomment if you want to use a specific color */
+}
+
+.news_date_underline {
+  text-decoration: underline;
+}
+
+
+/* Additional CSS to remove the border from the last item */
+.news_each:last-child {
+  border-bottom: none;
+}
+
+@media screen and (min-width: 720px) {
+  .news {
+      width: 450px; /* size for 1080px screen */
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .news {
+      width: 650px; /* size for 1080px screen */
+  }
+}
+
+.toggle_link {
+  color: gray;
+  font-family: 'Inter';
+  font-size: 15px;
+  cursor: pointer; /* 클릭 가능한 요소로 마우스 커서 변경 */
+  display: inline-flex; /* 인라인 블록 형태로 표시 */
+  align-items: center; /* 텍스트와 아이콘 수직 정렬 */
+  gap: 5px; /* 아이콘과 텍스트 사이의 간격 */
+}
+

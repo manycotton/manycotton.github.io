@@ -1,0 +1,169 @@
+.aboutMe{
+    display: flex;
+    width: 300px;
+    margin-top: 100px;
+}
+
+@media screen and (min-width: 720px) {
+    .aboutMe {
+        width: 650px; /* size for 1080px screen */
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .aboutMe {
+        width: 1000px; /* size for 1080px screen */
+    }
+}
+
+@media screen and (max-width: 719px) {
+    .aboutMe {
+        flex-direction: column; /* 컬럼 방향으로 변경 */
+        align-items: center; /* 중앙 정렬 */
+        width: 500px; /* 가로 폭을 100%로 설정 */
+    }
+
+    .profile {
+        width: 130%; /* profile 섹션의 너비 조정 */
+        text-align: center; /* 여기에 추가 */
+        margin-bottom: 50px;
+    }
+
+    .name {
+        text-align: left;
+    }
+    /* 각 텍스트 요소에 대한 display: flex 속성이 필요 없으므로 제거할 수 있음 */
+    .name, .degree, .researchArea, .affiliation, .email {
+        /* display: flex; 삭제 */
+        margin-bottom: 10px; /* 각 항목 사이의 공간을 조정 */
+    }
+
+    .description {
+        width: 100%; /* description 섹션의 너비 조정 */
+        /* 필요하다면 여기에도 text-align: center; 추가 가능 */
+    }
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.name{
+    display: flex;
+    width: 100%;
+    font-family: "inter-bold";
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.degree{
+    display: flex;
+    width: 100%;
+    font-family: "inter-semibold";
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.researchArea{
+    display: flex;
+    width: 100%;
+    font-family: "inter-semibold";
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.affiliation{
+    display: flex;
+    width: 100%;
+    font-family: "inter-light";
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.email{
+    display: flex;
+    width: 100%;
+    font-family: "inter-light";
+    font-size: 14px;
+}
+
+.email:hover{
+    display: flex;
+    width: 100%;
+    font-family: "inter-semibold";
+    text-decoration: underline;
+    color: #0057FF;
+    font-size: 14px;
+}
+
+.profile_image {
+    display: flex;
+    justify-content: flex-start;
+    width: 200px;
+    margin-bottom: 50px;
+
+}
+
+.detailed_info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 60%;
+}
+
+.description{
+    display: inline;
+    font-family: "inter-regular";
+    font-size: 16px;
+    line-height: 26px;
+    padding-bottom: 10px;
+    /* border-bottom: 1px solid #b1b1b1; */
+}
+
+.news {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.news_title {
+    font-family: inter-bold;
+    font-size: 17px;
+    margin-right: 20px;
+}
+
+/* .list_item {
+    padding-top: 0px;
+} */
+
+.aboutMe ul {
+    margin-block-start: 0em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.aboutMe .list_item li {
+    margin-bottom: 13px; /* 각 리스트 항목의 하단에 10픽셀의 여백을 추가 */
+    line-height: 22px;
+    font-size: 14px;
+}
+
+.aboutMe a {
+    color: #667085;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.highlighted {
+    font-family: "inter-semibold";
+    color: #0057FF;
+}
+
+.highlighted2 {
+    font-family: "inter-semibold";
+    color: black;
+}
