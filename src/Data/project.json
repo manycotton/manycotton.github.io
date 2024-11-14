@@ -1,5 +1,13 @@
 [
     {
+      "project_image": "images/AACessTalk.png",
+      "project_title": "Fostering Communication between Minimally Verbal Autistic Children and their Parents",
+      "project_description": "We present AACessTalk, a tablet-based, AI-mediated communication system that facilitates meaningful exchanges between an MVA child and a parent. AACessTalk provides real-time guides to the parent to engage the child in conversation and, in turn, recommends contextual vocabulary cards to the child. ",
+      "project_tag": ["ASD", "AAC", "LLM"],
+      "related_pub": ">> Project Webpage",
+      "pub_link": "https://naver-ai.github.io/aacesstalk/"
+    },
+    {
         "project_image": "images/chatGPT.png",
         "project_title": "Opportunities and challenges of integrating ChatGPT into everyday lives of autistic individuals",
         "project_description": "We conducted participatory workshops where autistic adults identified strategies to utilize LLM-based conversational AI (CA) in various aspects of their lives and we gathered data from their week-long use of LLM-based CA in daily activities.",

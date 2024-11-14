@@ -28,15 +28,18 @@
 
 .categories{
     display: flex;
-    font-family: 'inter-light';
-    font-size: 15.5px;
+    font-family: 'inter-regular';
+    font-size: 15px;
     margin-bottom: 40px;
-    width: 50%;
-    justify-content: space-between;
+    gap: 10px;
 }
 
 .category{
     display: flex;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 2px;
+    transition: all 0.2s ease;
 }
 
 .pub_set{
@@ -54,8 +57,8 @@
 .pubtitle{
     display: flex;
     font-family: 'inter-bold';
-    font-size: 16px;
-    margin-bottom: 5px;
+    font-size: 17px;
+    margin-bottom: 7px;
     line-height: 23px;
 }
 
@@ -70,6 +73,7 @@
 
 .venue{
     display: flex;
+    align-items: center;
     font-size: 15px;
     color: #2A2A2A;
     margin-bottom: 4px;
@@ -86,53 +90,61 @@
 .year{
     display: flex;
     font-family: 'inter-semibold';
-    color: #2A2A2A;
+    color: #3c3c3c;
     font-size: 15px;
-    margin-right: 6px;
+    line-height: 25px;
+    margin-right: 8px;
 }
 
 .others{
     display: flex;
-    color: #1A1A1A;
-    
+    gap: 6px;
+    margin-top: 5px;
+    color: #000000;
 }
 
 .awards{
     display: flex;
-    font-family: 'inter-semibold';
+    align-items: center;
+    font-family: 'inter-bold';
     color: #0057FF;    
     font-size: 15px;
-    margin-bottom: 4px;
+    padding: 2px 2px;
+    background-color: rgba(0, 87, 255, 0.08);
+    border-radius: 4px;
 }
 
-.doi{
+.doi, .pdf, .video, .Arxiv {
     display: flex;
     font-family: 'inter-regular';
-    font-size: 15px;
-    margin-right: 6px;
+    font-size: 13px;
+    background-color: #f4f4f4;
+    /* border: 1px solid black;  */
+    padding: 3px 6px;
+    transition: all 0.2s ease;
 }
 
-.pdf{
-    display: flex;
-    font-family: 'inter-regular';
-    font-size: 15px;
-    margin-right: 6px;
+.others .doi a,
+.others .pdf a,
+.others .video a,
+.others .Arxiv a {
+    color: rgb(74, 74, 74);
+    text-decoration: none;
 }
 
-.video{
-    display: flex;
-    font-family: 'inter-regular';
-    font-size: 15px;
-    margin-right: 6px;
-}
-
-.publications a {
-    color: #667085;
-}
-
-.publications a:hover {
+.others a:hover {
     color: #0057FF;
+    font-family: 'inter-semibold';
 }
+/* .doi:hover, .pdf:hover, .video:hover, .Arxiv:hover {
+  display: flex;
+  font-family: 'inter-semibold';
+  font-size: 13px;
+  background-color: white;
+  border: 1px solid #0057FF; 
+  padding: 3px 6px;
+  transition: all 0.2s ease;
+} */
 
 .pub_year{
     display: flex;
@@ -152,4 +164,22 @@
     font-family: inter-light;
     font-size: 14px;
     /* font-style: italic; */
+}
+
+.author-highlight {
+    font-family: 'inter-semibold';
+    color: #2A2A2A;
+    text-decoration: underline;
+    text-decoration-color: #2A2A2A;
+    text-decoration-style: underline;
+}
+
+.category.active {
+    font-family: 'inter-semibold';
+    color: #0057FF;
+    background-color: rgba(0, 87, 255, 0.1);
+}
+
+.category:hover {
+    background-color: rgba(0, 87, 255, 0.05);
 }

@@ -102,7 +102,7 @@
     display: flex;
     justify-content: flex-start;
     width: 200px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
 }
 
@@ -166,4 +166,19 @@
 .highlighted2 {
     font-family: "inter-semibold";
     color: black;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #667085;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0057FF;
 }
