@@ -98,6 +98,18 @@
     font-size: 14px;
 }
 
+.job-market-box {
+  background-color: #f7f7f7; /* 배경색을 옅은 회색으로 변경 */
+  border: 1px solid #ccc; /* 테두리 색상 설정 */
+  border-radius: 4px; /* 모서리 둥글게 */
+  padding: 15px 20px; /* 내부 여백 설정 */
+  margin-top: 0px; /* 위쪽 여백 설정 */
+  font-family: "inter-semibold"; /* 폰트 설정 */
+  font-size: 15px; /* 폰트 크기 설정 */
+  line-height: 1.5; /* 줄 간격을 description과 맞춤 */
+}
+
+
 .profile_image {
     display: flex;
     justify-content: flex-start;

@@ -13,13 +13,13 @@ export const Publications = (props) => {
                 );
             case 'full-paper':
                 return publications.filter(pub => 
-                    !pub.paper_type.includes("Poster") && 
-                    !pub.paper_type.includes("Under review")
+                    !pub.paper_type.includes("Poster") 
+                    // !pub.paper_type.includes("Under review")
                 );
             case 'preprint':
                 return publications.filter(pub => 
-                    pub.paper_type.includes("Under review") ||
-                    pub.doi === "Arxiv"
+                    pub.paper_type.includes("Under review") 
+                    // pub.doi === "Arxiv"
                 );
             case 'poster':
                 return publications.filter(pub => 

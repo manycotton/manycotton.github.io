@@ -29,8 +29,12 @@ export const AboutMe = (props) => {
         </div>
         <div className='detailed_info'>
             <div className='description'>
-                Hello! 👋 I am a third year PhD candidate in the Department of Industrial Design at KAIST. I am working with <a href="https://www.notion.so/galaxytourist/Hwajung-Hong-cc10b0291bbe4ca38dbf4882cd687423">Prof. Hwajung Hong</a> at <a href='https://dxd-lab.github.io/'>DxD Lab</a>.<br/><br/>
-                My research interest sits at the intersection of <span className='highlighted'>Human-AI Interaction</span> and <span className='highlighted'>Accessibility</span>, with a strong emphasis on a Human-Centered design approach. I mostly study and design <span className="highlighted">inclusive AI systems</span> for minority groups of people. Particularly, I am interested in investigating how current AI services cater to the unique identities and values of users with disabilities. Based on these understandings, I am recently working on leveraging AI to enrich the communication of non-verbal autistic children.
+                Hello! 👋 I am a fourth-year PhD candidate in the Department of Industrial Design at KAIST. I am working with <a href="https://www.notion.so/galaxytourist/Hwajung-Hong-cc10b0291bbe4ca38dbf4882cd687423">Prof. Hwajung Hong</a> at <a href='https://dxd-lab.github.io/'>DxD Lab</a>.<br/><br/>
+                My research lies at the intersection of Human-Computer Interaction (HCI) and Accessibility, with a strong focus on human-centered design. I study, design, and develop <span className="highlighted">inclusive AI systems</span> that empower minority groups to actively participate in society, all the while preserving their uniqueness and identities. Recently, I have been exploring the characteristics and challenges associated with AI-mediated social interactions among neurodiverse communities, and investigating ways to leverage AI to facilitate their self-exploration and self-advocacy in everyday social interaction.<br/><br/>
+                {/* While my research is closely related to autistic individuals, people with vision impairments, Deaf and hard-of-hearing communities, young migrants, and older adults, I am also interested in exploring and addressing the diverse characteristics and needs of other communities.                 */}
+            </div>
+            <div className='job-market-box'>
+                <span style={{ color: '#0057FF' }}>📢 I'm on the job market</span> and open to research roles in both academia and industry, especially in HCI, design, and accessibility.
             </div>
 
             <News />

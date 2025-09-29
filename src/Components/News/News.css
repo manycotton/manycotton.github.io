@@ -22,7 +22,15 @@
   font-weight: regular;
   font-size: 14px;
   line-height: 30px;
-  /* Removed the color comment, uncomment if you want to use a specific color */
+}
+
+.news_description a {
+  color: #2196F3; /* Blue color */
+  text-decoration: none;
+}
+
+.news_description a:hover {
+  text-decoration: underline;
 }
 
 .news_date_underline {
