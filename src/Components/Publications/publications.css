@@ -1,185 +1,159 @@
-.publications{
+.publications {
+    width: 100%;
+}
+
+.section-title {
+    font-size: 1.5rem !important;
+    font-weight: bold;
+    margin-bottom: 30px !important;
+    margin-top: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-left: 50px;
+    /* Align with grid content */
+}
+
+.categories {
     display: flex;
-    flex-direction: column;
-    text-align: left;
-    width: 300px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-
-@media screen and (min-width: 720px) {
-    .publications {
-        width: 650px; /* size for 1080px screen */
-    }
-}
-
-@media screen and (min-width: 1080px) {
-    .publications {
-        width: 1000px; /* size for 1080px screen */
-    }
-}
-
-.title{
-    display: flex;
-    font-family: 'inter-bold';
-    font-size: 25px;
-    margin-bottom: 30px;
-}
-
-.categories{
-    display: flex;
-    font-family: 'inter-regular';
-    font-size: 15px;
-    margin-bottom: 40px;
+    flex-wrap: wrap;
     gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+    padding-left: 50px;
+    /* Align with grid content */
 }
 
-.category{
-    display: flex;
+.category {
+    padding: 8px 16px;
+    /* Slightly smaller padding */
+    border: var(--border-width) solid var(--border-color);
     cursor: pointer;
-    padding: 6px 12px;
-    border-radius: 2px;
-    transition: all 0.2s ease;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    /* Slightly smaller font */
+    font-weight: bold;
+    transition: background-color 0.2s, color 0.2s;
 }
 
-.pub_set{
-    display: flex;
-    justify-content: space-between;
+.category:hover,
+.category.active {
+    background-color: var(--text-color);
+    color: var(--bg-color);
 }
 
-.pub{
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    margin-bottom: 35px;
-}
-
-.pubtitle{
-    display: flex;
-    font-family: 'inter-bold';
-    font-size: 17px;
-    margin-bottom: 7px;
-    line-height: 23px;
-}
-
-.authors{
-    display: inline;
-    font-family: 'inter-regular';
-    color: #2A2A2A;
-    font-size: 15px;
-    line-height: 20px;
-    margin-bottom: 4px;
-}
-
-.venue{
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-    color: #2A2A2A;
-    margin-bottom: 4px;
-}
-
-.conference{
-    display: flex;
-    font-family: 'inter-regular';
-    font-style: italic;
-    color: #2A2A2A;
-    margin-right: 6px;
-}
-
-.year{
-    display: flex;
-    font-family: 'inter-semibold';
-    color: #3c3c3c;
-    font-size: 15px;
-    line-height: 25px;
-    margin-right: 8px;
-}
-
-.others{
-    display: flex;
-    gap: 6px;
-    margin-top: 5px;
-    color: #000000;
-}
-
-.awards{
-    display: flex;
-    align-items: center;
-    font-family: 'inter-bold';
-    color: #0057FF;    
-    font-size: 15px;
-    padding: 2px 2px;
-    background-color: rgba(0, 87, 255, 0.08);
-    border-radius: 4px;
-}
-
-.doi, .pdf, .video, .Arxiv {
-    display: flex;
-    font-family: 'inter-regular';
-    font-size: 13px;
-    background-color: #f4f4f4;
-    /* border: 1px solid black;  */
-    padding: 3px 6px;
-    transition: all 0.2s ease;
-}
-
-.others .doi a,
-.others .pdf a,
-.others .video a,
-.others .Arxiv a {
-    color: rgb(74, 74, 74);
-    text-decoration: none;
-}
-
-.others a:hover {
-    color: #0057FF;
-    font-family: 'inter-semibold';
-}
-/* .doi:hover, .pdf:hover, .video:hover, .Arxiv:hover {
-  display: flex;
-  font-family: 'inter-semibold';
-  font-size: 13px;
-  background-color: white;
-  border: 1px solid #0057FF; 
-  padding: 3px 6px;
-  transition: all 0.2s ease;
-} */
-
-.pub_year{
+.publications-grid {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    /* border-top: var(--border-width) solid var(--border-color); Removed */
 }
 
-.year_info{
+.publication-row {
     display: flex;
-    font-family: inter-semibold;
-    font-size: 15px;
-    margin-bottom: 8px;
+    /* border-bottom: var(--border-width) solid var(--border-color); Removed */
+    margin-bottom: 30px;
+    /* Added spacing */
 }
 
-.paper_type{
+.pub-year-cell {
+    width: 200px;
+    /* Increased width */
+    border-right: none;
+    padding: 10px;
+    padding-left: 50px;
+    /* Reduced padding */
+    font-weight: bold;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    /* Reduced font size */
+    flex-shrink: 0;
+}
+
+.pub-content-cell {
+    flex: 1;
+    padding: 10px 150px 15px 15px;
+    /* Added significant right padding */
     display: flex;
-    font-family: inter-light;
-    font-size: 14px;
-    /* font-style: italic; */
+    flex-direction: column;
+    gap: 2px;
+    /* Reduced gap */
+}
+
+.pubtitle {
+    font-size: 1rem;
+    /* Reduced font size */
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.authors {
+    font-size: 0.9rem;
+    /* Reduced font size */
+    color: var(--text-color);
 }
 
 .author-highlight {
-    font-family: 'inter-semibold';
-    color: #2A2A2A;
     text-decoration: underline;
-    text-decoration-color: #2A2A2A;
-    text-decoration-style: underline;
+    font-weight: bold;
 }
 
-.category.active {
-    font-family: 'inter-semibold';
-    color: #0057FF;
-    background-color: rgba(0, 87, 255, 0.1);
+.venue {
+    font-style: italic;
+    font-size: 0.85rem;
+    /* Reduced font size */
+    color: #555;
 }
 
-.category:hover {
-    background-color: rgba(0, 87, 255, 0.05);
+.awards {
+    color: #db2424;
+    /* Darker red for text */
+    background-color: #ffd9dd;
+    /* Light red background */
+    font-weight: bold;
+    font-style: normal;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-left: 0px;
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+}
+
+.others {
+    display: flex;
+    gap: 10px;
+}
+
+.others div a {
+    border: var(--border-width) solid var(--border-color);
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.2s, color 0.2s;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.others div a:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+@media (max-width: 768px) {
+    .publication-row {
+        flex-direction: column;
+    }
+
+    .pub-year-cell {
+        width: 100%;
+        border-right: none;
+        border-bottom: var(--border-width) solid var(--border-color);
+        padding: 15px 20px;
+    }
+
+    .pub-content-cell {
+        padding: 20px;
+    }
 }

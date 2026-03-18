@@ -1,13 +1,57 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Covered+By+Your+Grace&family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&family=VT323&display=swap');
+
+:root {
+  /* International Style Blue */
+  --color-primary: #0033CC; 
+  --color-bg: #FFFFFF;
+  
+  --font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-serif-expressive: 'Cormorant Garamond', serif;
+  --font-quirky-sans: 'Syne', sans-serif;
+  --font-quirky-serif: 'Fraunces', serif;
+  --font-stranger: 'Chonburi', serif;
+  --font-swirly: 'Pinyon Script', cursive;
+  --font-handwritten: 'Covered By Your Grace', cursive; /* Switched to Covered By Your Grace */
+  --font-pixel: 'VT323', monospace; 
+  --font-mono: 'Space Mono', monospace;
+  
+  --spacing-unit: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-stack);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-bg);
+  color: #333333; /* Changed from Cobalt Blue to Black */
+  line-height: 1.4;
+  /* Raw text rendering */
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none;
+  color: #333333; /* Links also black by default */
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none; /* In this style, hover often does nothing or underlines */
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }

@@ -1,67 +1,37 @@
-.news {
+/* Typographical News List */
+.news-list {
   display: flex;
   flex-direction: column;
-  text-align: left; /* Add border around the whole news section */
-  width: 100%; /* Adjust width as necessary */
-
+  gap: 0;
+  /* border-top: 2px solid #333333; Black top line */
 }
 
-.news_title {
+.news-item {
   display: flex;
-  font-family: 'inter-bold';
-  font-size: 17px;
-  line-height: 28px;
-  margin-bottom: 10px;
+  flex-direction: column;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee; /* Lighter divider for news items */
 }
 
-
-
-.news_description {
-  display: block;
-  font-family: 'Inter', sans-serif;
-  font-weight: regular;
-  font-size: 14px;
-  line-height: 30px;
+.news-date {
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #333333;
+  margin-bottom: 4px;
 }
 
-.news_description a {
-  color: #2196F3; /* Blue color */
-  text-decoration: none;
+.news-content {
+  font-size: 0.9rem; /* Reduced from 1rem */
+  font-weight: 500;
+  line-height: 1.35;
+  color: #333; /* Ensure black */
 }
 
-.news_description a:hover {
+.news-content a {
+  font-weight: 700;
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
-
-.news_date_underline {
-  text-decoration: underline;
-}
-
-
-/* Additional CSS to remove the border from the last item */
-.news_each:last-child {
-  border-bottom: none;
-}
-
-@media screen and (min-width: 720px) {
-  .news {
-      width: 450px; /* size for 1080px screen */
-  }
-}
-
-@media screen and (min-width: 1080px) {
-  .news {
-      width: 650px; /* size for 1080px screen */
-  }
-}
-
-.toggle_link {
-  color: gray;
-  font-family: 'Inter';
-  font-size: 15px;
-  cursor: pointer; /* 클릭 가능한 요소로 마우스 커서 변경 */
-  display: inline-flex; /* 인라인 블록 형태로 표시 */
-  align-items: center; /* 텍스트와 아이콘 수직 정렬 */
-  gap: 5px; /* 아이콘과 텍스트 사이의 간격 */
-}
-

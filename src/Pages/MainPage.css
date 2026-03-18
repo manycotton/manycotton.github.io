@@ -1,0 +1,466 @@
+/* Experimental Blue / International Style Layout but in Monochrome */
+
+.main-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px;
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.huge-bio a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.huge-bio a:hover {
+  text-decoration: underline;
+}
+
+/* --- Top Navigation Bar --- */
+.top-bar {
+  display: flex;
+  justify-content: space-between; /* Space between Name and Link */
+  align-items: center;
+  margin-bottom: 60px;
+  font-weight: 700; 
+  font-size: 1.5rem;
+}
+
+.top-link {
+  font-size: 1.2rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+  gap: 2px; /* Very narrow gap */
+  color: #333;
+  transition: opacity 0.2s;
+}
+
+.top-link:hover {
+  opacity: 0.7;
+}
+
+/* --- Main Grid Layout --- */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 350px; 
+  gap: 80px;
+  align-items: start;
+  margin-bottom: 100px;
+}
+
+/* Left Column: Bio Only */
+
+
+.huge-bio {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  max-width: 90%;
+  color: #333;
+}
+
+.huge-bio p {
+  margin-bottom: 0;
+}
+
+/* Mixed Typography Styles */
+.bio-highlight {
+  font-family: var(--font-stack);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  border-bottom: 3px solid #333;
+}
+
+.bio-serif-italic {
+  font-family: var(--font-serif-expressive);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.1em; /* Slightly larger for emphasis */
+}
+
+.bio-bold {
+  font-family: var(--font-stack);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
+}
+
+.bio-mono {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid #333;
+  font-weight: 700;
+}
+
+.bio-stroke {
+  -webkit-text-stroke: 1px #333;
+  color: transparent;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+/* Animated Text Base */
+.animated-text {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.animated-char {
+  display: inline-block;
+  transform-origin: center;
+  transition: color 0.2s;
+}
+
+/* 1. Wave Effect (Human-centered AI) */
+.animated-text.wave:hover .animated-char {
+  animation: wave 0.6s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.05s);
+}
+
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* 2. Pop Effect (Inclusive Technologies) */
+.animated-text.pop:hover .animated-char {
+  animation: pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite alternate;
+  animation-delay: calc(var(--i) * 0.03s);
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.3); color: #333; }
+}
+
+/* 3. Glitch Effect (Minority Groups target) */
+.animated-text.glitch:hover .animated-char {
+  animation: glitch 0.3s steps(2) infinite;
+  animation-delay: calc(var(--i) * 0.1s); /* Random chaotic feel */
+}
+
+@keyframes glitch {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(2px, -2px); }
+  50% { transform: translate(-2px, 1px); }
+  75% { transform: translate(1px, 2px); }
+  100% { transform: translate(-1px, -1px); }
+}
+
+.bio-focus {
+  font-family: var(--font-serif);
+  font-weight: 800;
+  font-style: italic;
+  font-size: 1.1em;
+  letter-spacing: 0.02em;
+}
+
+.bio-handwritten {
+  font-family: var(--font-handwritten);
+  font-size: 1.0em; /* Larger because this font is thin */
+  /* color: #555; */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 4px;
+}
+
+.bio-pixel {
+  font-family: var(--font-pixel);
+  font-size: 1.1em; /* VT323 is narrow, needs to be larger */
+  /* color: #555; */
+  letter-spacing: 0.02em; 
+  line-height: 0.8; 
+}
+
+.bio-italic {
+  font-family: var(--font-serif-expressive);
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* Right Column: Image + Contact + News */
+.right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Image & Contact Overlay Wrapper */
+.image-sidebar-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  /* Tighter margin to ensure visual connection */
+  margin-top: 60px; 
+}
+
+.bio-image {
+  width: 100%;
+  display: block;
+}
+
+.contact-overlay {
+  position: absolute;
+  /* Start just slightly above so the list flows INTO the image */
+  top: -50px; 
+  left: 20px; /* Reduced indentation */
+  background: transparent; 
+  text-align: left;
+  font-style: italic;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Slightly more breathing room */
+  mix-blend-mode: multiply; /* Helps it blend "sensually" with the image */
+}
+
+.contact-overlay a {
+  display: block;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.1;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: #333; /* Back to Black */
+  letter-spacing: 0.02em;
+  background-color: transparent; 
+  padding: 0;
+  margin-bottom: 0;
+  transition: opacity 0.2s;
+}
+
+.contact-overlay a:hover {
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+/* Action Links (Work with me, Pubs) */
+.action-links {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 500px; /* Increased length for horizontal lines */
+  border-top: 2px solid #333333; 
+}
+
+.action-link {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align icon next to text */
+  gap: 15px; /* Closer gap */
+  color: #333333;
+  width: 100%; /* Spans the full fit-content width of container */
+  padding: 20px 0;
+  border-bottom: 2px solid #333333; /* Divider and bottom line */
+  line-height: 1;
+  letter-spacing: -0.02em;
+  transition: opacity 0.2s;
+}
+
+.action-link:hover {
+  opacity: 0.7;
+}
+
+.action-icon {
+  font-weight: 300; /* For SVG, weight might not apply directly unless stroke-width, but opacity works */
+  /* SVG size is handled by props, but we can enforce it here if needed */
+  transition: transform 0.2s;
+}
+
+.action-link:hover .action-icon {
+  transform: translate(2px, -2px); /* Slight movement on hover */
+}
+
+/* Sidebar News Container */
+.sidebar-news {
+  padding-top: 10px;
+  padding-right: 30px;
+}
+
+/* --- Full Width Sections --- */
+.full-width-section {
+  width: 100%;
+  margin-top: 80px;
+}
+
+.fw-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 15px;
+  margin-bottom: 40px;
+}
+
+/* Publication Grid (Full Width) */
+.pub-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.publications-section {
+  width: 90%; /* Reduced width as requested (User said 80%, but 90 might be safer, let's try 85%) */
+  max-width: 900px;
+}
+
+/* Publication List Styling */
+.pub-item {
+  padding: 10px 0; /* More compact vertical spacing */
+  display: flex;
+  flex-direction: column;
+}
+
+.pub-inner-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5px; /* Reduced gap */
+  width: 100%;
+}
+
+/* Remove border for the last item if needed, but usually fine to keep */
+
+.pub-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Tighter gap between elements */
+  width: 80%; /* Fixed width as requested */
+}
+
+.pub-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 100px; /* Ensure space for venue */
+}
+
+.pub-award {
+  color: var(--color-primary); /* Blue */
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+  background-color: #EEF4FF; /* Light Blue Background */
+  padding: 2px 3px;
+  border-radius: 4px;
+  display: inline-block; /* Wrap text */
+  width: fit-content;
+}
+
+.pub-title {
+  font-family: var(--font-stack); /* Ensure same font */
+  font-size: 1.1rem; /* Slightly smaller for compactness */
+  font-weight: 700;
+  line-height: 1.3;
+  color: #333;
+  letter-spacing: -0.01em; /* Match bio spacing */
+}
+
+.pub-authors {
+  font-family: var(--font-stack);
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+  letter-spacing: -0.01em; /* Match bio spacing */
+}
+
+.pub-venue {
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: right;
+  color: #333;
+}
+
+.pub-paper-type {
+  font-size: 0.85rem;
+  text-align: right;
+  color: #777; /* Gray */
+  margin-top: 2px;
+}
+
+/* Tag Links (DOI, PDF) */
+.pub-tags {
+  display: flex;
+  gap: 6px;
+  margin-top: 1px; /* Tighter spacing */
+  flex-wrap: wrap;
+}
+
+.pub-tags a, .pub-tag-type {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 6px;
+  background-color: #f5f5f5; /* Light Gray Background */
+  color: #555;
+  text-decoration: none;
+  border-radius: 1px; 
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.pub-tags a:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.pub-tag-type {
+  background-color: transparent;
+  padding: 6px 0;
+  color: #999;
+}
+
+/* Footer */
+.footer {
+  margin-top: 120px;
+  padding-top: 20px;
+  font-weight: 400;
+  color: #7f7f7f;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  
+  .image-sidebar-wrapper {
+    max-width: 200px;
+    margin-top: 40px;
+  }
+  
+  .contact-overlay {
+    right: -20px;
+  }
+  
+  .pub-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .pub-links {
+    text-align: left;
+  }
+  
+  .pub-links a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}

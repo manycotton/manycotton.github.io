@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import { Main } from './Pages/Main.js';
+import { MainPage } from './Pages/MainPage';
+import WorkWithMePage from './Pages/WorkWithMePage';
 
 function App() {
   useEffect(() => {
@@ -27,13 +24,14 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <BrowserRouter>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Main/>}/>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/work-with-me" element={<WorkWithMePage />} />
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
