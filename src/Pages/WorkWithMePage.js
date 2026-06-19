@@ -32,6 +32,13 @@ const WorkWithMePage = () => {
           </div>
 
           <div className="work-subsection">
+            <h3>Master by Research</h3>
+            <p>
+              Opportunities for Master by Research (MRes) are available through the NUS Division of Industrial Design (DID).
+            </p>
+          </div>
+
+          <div className="work-subsection">
             <h3>Postdoctoral Researcher</h3>
             <p>
               I am looking for postdoctoral researchers to lead research in inclusive AI systems. If you are passionate about investigating the social impact of AI and building real-world AI systems that empower users, please reach out to discuss potential opportunities.
@@ -49,7 +56,7 @@ const WorkWithMePage = () => {
         <section className="work-section">
           {/* <h2>How to Apply</h2> */}
           <p>
-            If you’re interested in joining the lab, please send an email to <a href="">dasom@nus.edu.sg</a> with:
+            If you’re interested in joining the lab, please send an email to <u>dasom@nus.edu.sg</u> with:
           </p>
           <ul className="work-list">
             <li>Your CV and a brief note on what you hope to achieve or learn in our lab.</li>

@@ -2,158 +2,30 @@
     width: 100%;
 }
 
-.section-title {
-    font-size: 1.5rem !important;
-    font-weight: bold;
-    margin-bottom: 30px !important;
-    margin-top: 50px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding-left: 50px;
-    /* Align with grid content */
+.pubs-title {
+    display: none;
 }
 
 .categories {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 20px;
-    padding-bottom: 0px;
-    padding-left: 50px;
-    /* Align with grid content */
+    margin-bottom: 30px;
 }
 
 .category {
     padding: 8px 16px;
-    /* Slightly smaller padding */
-    border: var(--border-width) solid var(--border-color);
+    border: 1px solid #333;
     cursor: pointer;
     text-transform: uppercase;
     font-size: 0.75rem;
-    /* Slightly smaller font */
     font-weight: bold;
+    color: #333;
     transition: background-color 0.2s, color 0.2s;
 }
 
 .category:hover,
 .category.active {
-    background-color: var(--text-color);
-    color: var(--bg-color);
-}
-
-.publications-grid {
-    display: flex;
-    flex-direction: column;
-    /* border-top: var(--border-width) solid var(--border-color); Removed */
-}
-
-.publication-row {
-    display: flex;
-    /* border-bottom: var(--border-width) solid var(--border-color); Removed */
-    margin-bottom: 30px;
-    /* Added spacing */
-}
-
-.pub-year-cell {
-    width: 200px;
-    /* Increased width */
-    border-right: none;
-    padding: 10px;
-    padding-left: 50px;
-    /* Reduced padding */
-    font-weight: bold;
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
-    /* Reduced font size */
-    flex-shrink: 0;
-}
-
-.pub-content-cell {
-    flex: 1;
-    padding: 10px 150px 15px 15px;
-    /* Added significant right padding */
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    /* Reduced gap */
-}
-
-.pubtitle {
-    font-size: 1rem;
-    /* Reduced font size */
-    font-weight: bold;
-    line-height: 1.4;
-}
-
-.authors {
-    font-size: 0.9rem;
-    /* Reduced font size */
-    color: var(--text-color);
-}
-
-.author-highlight {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.venue {
-    font-style: italic;
-    font-size: 0.85rem;
-    /* Reduced font size */
-    color: #555;
-}
-
-.awards {
-    color: #db2424;
-    /* Darker red for text */
-    background-color: #ffd9dd;
-    /* Light red background */
-    font-weight: bold;
-    font-style: normal;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    display: inline-block;
-    margin-left: 0px;
-    margin-top: 2px !important;
-    margin-bottom: 2px !important;
-}
-
-.others {
-    display: flex;
-    gap: 10px;
-}
-
-.others div a {
-    border: var(--border-width) solid var(--border-color);
-    padding: 2px 8px;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: background-color 0.2s, color 0.2s;
-    display: inline-block;
-    text-decoration: none;
-    color: var(--text-color);
-}
-
-.others div a:hover {
-    background-color: var(--text-color);
-    color: var(--bg-color);
-}
-
-@media (max-width: 768px) {
-    .publication-row {
-        flex-direction: column;
-    }
-
-    .pub-year-cell {
-        width: 100%;
-        border-right: none;
-        border-bottom: var(--border-width) solid var(--border-color);
-        padding: 15px 20px;
-    }
-
-    .pub-content-cell {
-        padding: 20px;
-    }
+    background-color: #333;
+    color: #fff;
 }

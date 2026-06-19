@@ -90,59 +90,62 @@ export const MainPage = () => {
 
           {/* Publications Section */}
           <div className="publications-section" id="publications" style={{marginTop: '100px'}}>
-             <div className="section-title" style={{
+             <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'baseline',
                 paddingBottom:'10px', 
-                marginBottom:'20px', 
-                textTransform:'uppercase', 
-                fontWeight:'700',
-                fontSize: '1.2rem',
-                textDecoration: 'underline',
-                textUnderlineOffset: '6px'
+                marginBottom:'20px'
              }}>
-                Selected Publications
+                 <div className="section-title" style={{
+                    textTransform:'uppercase', 
+                    fontWeight:'700',
+                    fontSize: '1.2rem',
+                    textDecoration: 'underline',
+                    textUnderlineOffset: '6px'
+                 }}>
+                    Selected Publications
+                 </div>
+                 <Link to="/publications" style={{
+                     display: 'inline-flex',
+                     alignItems: 'center',
+                     gap: '4px',
+                     fontSize: '0.9rem',
+                     fontWeight: '500',
+                     textDecoration: 'none',
+                     color: '#555',
+                 }}>
+                     All Pubs <div style={{ display: 'flex', marginTop: '1px' }}><LongArrowIcon size={15} strokeWidth={2} /></div>
+                 </Link>
              </div>
              
              <div className="pub-grid">
                 {publication_data
-                   .filter(pub => 
-                      pub.authors.trim().startsWith("Dasom Choi") && 
-                      !pub.paper_type 
+                   .filter(pub =>
+                      pub.authors.trim().startsWith("Dasom Choi") &&
+                      !pub.paper_type
                    )
-                   .map((pub, index) => (
-                  <div key={index} className="pub-item">
-                     {/* Award Badge (Top, Full Width) */}
-                     {pub.awards && <div className="pub-award">{pub.awards}</div>}
-                     
-                     <div className="pub-inner-row">
-                        {/* Left: Content (Title, Authors, Tags) */}
-                        <div className="pub-left">
-                           {/* Title */}
-                           <div className="pub-title">{pub.pubtitle}</div>
-                           
-                           {/* Authors */}
-                           <div 
-                              className="pub-authors" 
-                              dangerouslySetInnerHTML={{
-                                __html: pub.authors.replace("Dasom Choi", "<u>Dasom Choi</u>")
-                              }}
-                           />
-
-                           {/* Tags */}
-                           <div className="pub-tags">
-                              {pub.doi_url && <a href={pub.doi_url} target="_blank" rel="noreferrer">DOI</a>}
-                              {pub.pdf_url && <a href={pub.pdf_url} target="_blank" rel="noreferrer">PDF</a>}
-                              {pub.video_url && <a href={pub.video_url} target="_blank" rel="noreferrer">Video</a>}
-                           </div>
-                        </div>
-
-                        {/* Right: Venue */}
-                        <div className="pub-right">
-                           <div className="pub-venue">{pub.year_info}</div>
-                           {pub.paper_type && <div className="pub-paper-type">{pub.paper_type}</div>}
-                        </div>
-                     </div>
-                  </div>
-                ))}
+                   .map((pub, index) => {
+                     const venue = pub.paper_type ? `${pub.year_info} ${pub.paper_type}` : pub.year_info;
+                     return (
+                       <div key={index} className="pub-item">
+                         {pub.awards && <div className="pub-award">{pub.awards}</div>}
+                         <div className="pub-title">{pub.pubtitle}</div>
+                         <div
+                           className="pub-authors"
+                           dangerouslySetInnerHTML={{
+                             __html: pub.authors.replace("Dasom Choi", "<u>Dasom Choi</u>")
+                           }}
+                         />
+                         <div className="pub-venue-row">
+                           <span className="pub-venue-line">{venue}</span>
+                           {pub.doi_url && <a className="pub-link" href={pub.doi_url} target="_blank" rel="noreferrer">DOI</a>}
+                           {pub.pdf_url && <a className="pub-link" href={pub.pdf_url} target="_blank" rel="noreferrer">PDF</a>}
+                           {pub.video_url && <a className="pub-link" href={pub.video_url} target="_blank" rel="noreferrer">Video</a>}
+                         </div>
+                       </div>
+                     );
+                   })}
              </div>
           </div>
         </div>

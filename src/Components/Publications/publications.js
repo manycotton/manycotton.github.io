@@ -1,117 +1,44 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './publications.css'
 import publication_data from '../../Data/publication.json'
 
 export const Publications = (props) => {
-    const [activeTab, setActiveTab] = useState('all');
-
-    const filterPublications = (publications) => {
-        switch (activeTab) {
-            case 'first-author':
-                return publications.filter(pub =>
-                    pub.authors.split(", ")[0] === "Dasom Choi"
-                );
-            case 'full-paper':
-                return publications.filter(pub =>
-                    !pub.paper_type.includes("Poster")
-                    // !pub.paper_type.includes("Under review")
-                );
-            case 'preprint':
-                return publications.filter(pub =>
-                    pub.paper_type.includes("Under review")
-                    // pub.doi === "Arxiv"
-                );
-            case 'poster':
-                return publications.filter(pub =>
-                    pub.paper_type.includes("Poster")
-                );
-            default:
-                return publications;
-        }
-    };
-
     return (
         <>
             <div className='publications'>
-                <div className='section-title'>Publications</div>
-                <div className='categories'>
-                    <div
-                        className={`category ${activeTab === 'all' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('all')}
-                    >
-                        All
-                    </div>
-                    <div
-                        className={`category ${activeTab === 'first-author' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('first-author')}
-                    >
-                        First Author
-                    </div>
-                    <div
-                        className={`category ${activeTab === 'full-paper' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('full-paper')}
-                    >
-                        Full Paper
-                    </div>
-                    <div
-                        className={`category ${activeTab === 'poster' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('poster')}
-                    >
-                        Poster
-                    </div>
-                    <div
-                        className={`category ${activeTab === 'preprint' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('preprint')}
-                    >
-                        Preprint
-                    </div>
-
-                </div>
-
-                <div className='publications-grid'>
+                <div className="pub-grid">
                     {
-                        filterPublications(publication_data).map((data, index) => (
-                            <div className='publication-row' key={index}>
-                                <div className='pub-year-cell'>
-                                    <div className='year_info'>
-                                        {data.year_info}
-                                        {data.paper_type && data.paper_type.includes("Poster") && <div>(Poster)</div>}
+                        publication_data.map((pub, index) => (
+                            <div key={index} className="pub-item">
+                                {/* Award Badge (Top, Full Width) */}
+                                {pub.awards && <div className="pub-award">{pub.awards}</div>}
+                                
+                                <div className="pub-inner-row">
+                                    {/* Left: Content (Title, Authors, Tags) */}
+                                    <div className="pub-left" style={{ width: '100%', maxWidth: '720px', paddingRight: '20px' }}>
+                                        {/* Title */}
+                                        <div className="pub-title">{pub.pubtitle}</div>
+                                        
+                                        {/* Authors */}
+                                        <div 
+                                            className="pub-authors" 
+                                            dangerouslySetInnerHTML={{
+                                                __html: pub.authors.replace("Dasom Choi", "<u>Dasom Choi</u>")
+                                            }}
+                                        />
+
+                                        {/* Tags */}
+                                        <div className="pub-tags">
+                                            {pub.doi_url && <a href={pub.doi_url} target="_blank" rel="noreferrer">DOI</a>}
+                                            {pub.pdf_url && <a href={pub.pdf_url} target="_blank" rel="noreferrer">PDF</a>}
+                                            {pub.video_url && <a href={pub.video_url} target="_blank" rel="noreferrer">Video</a>}
+                                        </div>
                                     </div>
-                                </div>
-                                <div className='pub-content-cell'>
-                                    <div className='pubtitle'>{data.pubtitle}</div>
-                                    <div className='authors'>
-                                        {data.authors && data.authors.split(", ").map((author, index, array) => (
-                                            <React.Fragment key={index}>
-                                                <span className={author === "Dasom Choi" ? 'author-highlight' : ''}>
-                                                    {author}
-                                                </span>
-                                                {index < array.length - 1 && <span>, </span>}
-                                                {' '}
-                                            </React.Fragment>
-                                        ))}
-                                    </div>
-                                    <div className='venue'>
-                                        {data.paper_type && !data.paper_type.includes("Poster") && data.paper_type}
-                                        {data.awards && (
-                                            <>
-                                                {data.paper_type && !data.paper_type.includes("Poster") && " | "}
-                                                <span className='awards'>
-                                                    {data.awards}
-                                                </span>
-                                            </>
-                                        )}
-                                    </div>
-                                    <div className='others'>
-                                        {data.doi && data.doi_url && (
-                                            <div className='doi'><a href={data.doi_url}>{data.doi}</a></div>
-                                        )}
-                                        {data.pdf && data.pdf_url && (
-                                            <div className='pdf'><a href={data.pdf_url}>{data.pdf}</a></div>
-                                        )}
-                                        {data.video && data.video_url && (
-                                            <div className='video'><a href={data.video_url}>{data.video}</a></div>
-                                        )}
+
+                                    {/* Right: Venue */}
+                                    <div className="pub-right">
+                                        <div className="pub-venue">{pub.year_info}</div>
+                                        {pub.paper_type && <div className="pub-paper-type">{pub.paper_type}</div>}
                                     </div>
                                 </div>
                             </div>

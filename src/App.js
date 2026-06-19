@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import { MainPage } from './Pages/MainPage';
 import WorkWithMePage from './Pages/WorkWithMePage';
+import FullPublicationsPage from './Pages/FullPublicationsPage';
 
 function App() {
   useEffect(() => {
@@ -29,6 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/work-with-me" element={<WorkWithMePage />} />
+          <Route path="/publications" element={<FullPublicationsPage />} />
         </Routes>
       </div>
     </BrowserRouter>
